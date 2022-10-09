@@ -1,15 +1,15 @@
-import { Todo } from "../../Domain/Model/Todo";
-import { TodoRepository } from "../../Domain/Repository/TodoRepository";
-import TodoDataSource from "../DataSource/TodoDataSource";
+import { ITodo } from "../../domain/model/Todo";
+import { ITodoRepository } from "../../domain/repository/TodoRepository";
+import ITodoDataSource from "../DataSource/TodoDataSource";
 
-export class TodoRepositoryImpl implements TodoRepository {
-  dataSource: TodoDataSource;
+export class TodoRepositoryImpl implements ITodoRepository {
+  dataSource: ITodoDataSource;
 
-  constructor(_datasource: TodoDataSource) {
+  constructor(_datasource: ITodoDataSource) {
     this.dataSource = _datasource;
   }
 
-  async getTodos(): Promise<Todo[]> {
+  async getTodos(): Promise<ITodo[]> {
     return this.dataSource.getTodos();
   }
 }

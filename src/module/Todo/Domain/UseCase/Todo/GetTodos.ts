@@ -1,14 +1,14 @@
-import { Todo } from "../../Model/Todo";
-import { TodoRepository } from "../../Repository/TodoRepository";
+import { ITodo } from "../../model/Todo";
+import { ITodoRepository } from "../../repository/TodoRepository";
 
-export interface GetTodosUseCase {
-    invoke: () => Promise<Todo[]>
+export interface IGetTodosUseCase {
+    invoke: () => Promise<ITodo[]>
 
 }
 
-export class GetTodos implements GetTodosUseCase {
-    private todoRepo: TodoRepository
-    constructor(_todoRepo: TodoRepository) {
+export class GetTodos implements IGetTodosUseCase {
+    private todoRepo: ITodoRepository
+    constructor(_todoRepo: ITodoRepository) {
         this.todoRepo = _todoRepo;
     }
 

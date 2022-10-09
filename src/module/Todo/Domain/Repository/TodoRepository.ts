@@ -1,5 +1,5 @@
-import { Todo } from "../Model/Todo";
+import { ITodo } from "../model/Todo";
 
-export interface TodoRepository {
-    getTodos(): Promise<Todo[]>;
+export interface ITodoRepository {
+    getTodos(): Promise<ITodo[]>;
 }

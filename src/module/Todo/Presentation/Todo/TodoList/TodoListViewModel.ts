@@ -1,11 +1,11 @@
 import { useState } from "react";
-import TodoAPIDataSourceImpl from "../../../Data/DataSource/API/TodoAPIDataSource";
-import { TodoRepositoryImpl } from "../../../Data/Repository/TodoRepositoryImpl";
-import { Todo } from "../../../Domain/Model/Todo";
-import { GetTodos } from "../../../Domain/UseCase/Todo/GetTodos";
+import TodoAPIDataSourceImpl from "../../../data/DataSource/API/TodoAPIDataSource";
+import { TodoRepositoryImpl } from "../../../data/Repository/TodoRepositoryImpl";
+import { ITodo } from "../../../domain/model/Todo";
+import { GetTodos } from "../../../domain/useCase/Todo/GetTodos";
 
 export default function TodoListViewModel() {
-    const [todos, setTodos] = useState<Todo[]>([]);
+    const [todos, setTodos] = useState<ITodo[]>([]);
 
     const UseCase = new GetTodos(
         new TodoRepositoryImpl(new TodoAPIDataSourceImpl())

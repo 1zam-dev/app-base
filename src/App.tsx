@@ -1,10 +1,11 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import TodoListView from "./module/Todo/Presentation/Todo/TodoList/TodoListView";
+import { router } from "./routers";
 
 function App() {
   return (
     <div className="App">
-      <TodoListView />
+      <RouterProvider router={router} />
     </div>
   );
 }

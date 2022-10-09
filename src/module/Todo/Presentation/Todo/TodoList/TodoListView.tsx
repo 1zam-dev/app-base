@@ -8,7 +8,10 @@ import {
     ListItemText,
 } from "@mui/material";
 
-export default function TodoListView() {
+import { observer } from 'mobx-react-lite';
+
+
+const TodoListView = observer(() => {
     const { getTodos, todos } = useViewModel();
 
     useEffect(() => {
@@ -29,4 +32,6 @@ export default function TodoListView() {
             })}
         </List>
     );
-}
+})
+
+export default TodoListView;
