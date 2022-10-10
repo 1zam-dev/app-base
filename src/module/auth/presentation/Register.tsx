@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Resister() {
+export default function Register() {
   return (
     <div>Resister</div>
   )

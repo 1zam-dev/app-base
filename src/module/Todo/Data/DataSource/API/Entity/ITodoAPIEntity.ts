@@ -1,4 +1,4 @@
-export interface TodoAPIEntity {
+export interface ITodoAPIEntity {
     id: number;
     title: string;
     completed: boolean;

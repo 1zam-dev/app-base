@@ -1,5 +1,5 @@
-import { ITodo } from "../../model/Todo";
-import { ITodoRepository } from "../../repository/TodoRepository";
+import { ITodo } from "../../model/ITodo";
+import { ITodoRepository } from "../../repository/ITodoRepository";
 
 export interface IGetTodosUseCase {
     invoke: () => Promise<ITodo[]>

@@ -1,7 +1,4 @@
 import Login from "./presentation/Login";
-import Resister from "./presentation/Resister";
+import Register from "./presentation/Register";
 
-export {
-  Login,
-  Resister,
-}
+export { Login, Register };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TodoAPIDataSourceImpl from "../../../data/DataSource/API/TodoAPIDataSource";
 import { TodoRepositoryImpl } from "../../../data/Repository/TodoRepositoryImpl";
-import { ITodo } from "../../../domain/model/Todo";
+import { ITodo } from "../../../domain/model/ITodo";
 import { GetTodos } from "../../../domain/useCase/Todo/GetTodos";
 
 export default function TodoListViewModel() {

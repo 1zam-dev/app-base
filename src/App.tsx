@@ -1,12 +1,20 @@
+import { CssBaseline, ThemeProvider } from "@mui/material";
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import { router } from "./routers";
+import theme from "./layouts/themes/theme";
+import { router } from "./router";
+import AuthProvider from "./store/auth/AuthProvider";
 
 function App() {
   return (
-    <div className="App">
-      <RouterProvider router={router} />
-    </div>
+    <ThemeProvider theme={theme}>
+      <AuthProvider>
+        <div className="App">
+          <CssBaseline />
+          <RouterProvider router={router} />
+        </div>
+      </AuthProvider>
+    </ThemeProvider>
   );
 }
 
