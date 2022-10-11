@@ -1,4 +1,4 @@
-import { ITodo } from "src/module/todo/domain/model/ITodo";
+import { ITodo } from "src/modules/todo/domain/model/ITodo";
 import ITodoDataSource from "../ITodoDataSource";
 import { ITodoAPIEntity } from "./Entity/ITodoAPIEntity";
 

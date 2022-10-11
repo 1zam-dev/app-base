@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import AuthenticationGuard from "src/layouts/AuthenticationGuard";
 import Layout from "src/layouts/Layout";
-import { Login, Register } from "src/module/auth";
-import ErrorPage from "src/module/errors/ErrorPage";
-import Contact from "src/module/profile/Contact";
-import { TodoListView } from "src/module/todo/presentation/Todo";
+import { Login, Register } from "src/modules/auth";
+import ErrorPage from "src/modules/errors/ErrorPage";
+import Contact from "src/modules/profile/Contact";
+import { TodoListView } from "src/modules/todo/presentation/Todo";
 
 export const router = createBrowserRouter([
   {
