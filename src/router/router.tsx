@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
-import AuthenticationGuard from "src/layouts/AuthenticationGuard";
-import Layout from "src/layouts/Layout";
-import Login from "src/pages/auth/Login";
+import AuthenticationGuard from "src/core/layouts/AuthenticationGuard";
+import Layout from "src/core/layouts/Layout";
+import Auth from "src/pages/Auth/Auth";
 import ErrorPage from "src/pages/errors/ErrorPage";
-import Contact from "src/pages/profile/Contact";
-import { TodoListView } from "src/pages/Todo";
+import { Front } from "src/pages/Front";
+import { User } from "src/pages/User";
 
 export const router = createBrowserRouter([
   {
@@ -13,26 +13,18 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "",
-        element: <TodoListView />,
+        path: "/",
+        element: <Front />
       },
       {
-        path: "todo",
-        element: <TodoListView />,
+        path: "auth",
+        element: <Auth />,
       },
       {
-        path: "login",
-        element: <Login />,
-      },
-      {
-        path: "register",
-        element: <Register />,
-      },
-      {
-        path: "contacts",
+        path: "user",
         element: (
           <AuthenticationGuard>
-            <Contact />
+            <User />
           </AuthenticationGuard>
         ),
       },

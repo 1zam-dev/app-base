@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { APP_STORAGE } from 'src/config/index';
+import { APP_STORAGE } from 'src/core/config';
 
 export default class DefaultAxios {
     api;

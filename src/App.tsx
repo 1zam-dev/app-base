@@ -1,19 +1,19 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
-import theme from "./layouts/themes/theme";
+import theme from "./core/layouts/themes/theme";
 import { router } from "./router";
-import AuthProvider from "./store/auth/AuthProvider";
+import Provider from "./store/store";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <AuthProvider>
+      <Provider>
         <div className="App">
           <CssBaseline />
           <RouterProvider router={router} />
         </div>
-      </AuthProvider>
+      </Provider>
     </ThemeProvider>
   );
 }
