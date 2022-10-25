@@ -1,0 +1,15 @@
+.form {
+	text-align: center;
+	label {
+		display: flex;
+		margin: 10px 0;
+		
+	}
+	span {
+		min-width: 70px;
+		padding-top: 18px;
+	}
+	button {
+		cursor: pointer;
+	}
+}

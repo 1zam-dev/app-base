@@ -1,0 +1,32 @@
+.cookie {
+	display: block;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+	padding: 10px;
+	height:100%;
+	ul {
+		margin: 10px 0;
+
+	}
+	li{
+		text-align: center;
+		padding-right: 30px;
+	}
+
+}
+.image {
+	display: block;
+	font-size: 8em;
+	line-height: 1;
+	text-align: center;
+	padding: 20px 0 20px 0;
+}
+.contains {
+	padding-inline-start: 0.5rem;
+}
+.title{
+	font-weight: 800;
+	font-size: 20px;
+	color: rgb(230, 163, 174);
+	text-align: center;
+}

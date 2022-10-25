@@ -2,8 +2,9 @@ import React, { useState } from "react";
 
 import { UserName } from "../../domain/user";
 import { useAuthenticate } from "../../application/authenticate";
-import styles from "./Auth.module.css";
-import { Navigate } from "react-router-dom";
+import  "./Auth.scss";
+import { Navigate } from "react-router-dom"; 
+import { OutlinedInput, Button } from "@mui/material";
 
 const Auth = () => {
   const [name, setName] = useState<UserName>("");
@@ -23,19 +24,28 @@ const Auth = () => {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className='form' onSubmit={handleSubmit}>
       <label>
-        <span>Name</span>
-        <input type="text" name="name" value={name} onChange={(e) => setName(e.target.value)} autoFocus />
+        <span>Name :</span>
+        <OutlinedInput   
+           type="text"
+           name="name"
+           value={name} 
+            onChange={(e) => setName(e.target.value)} 
+            autoFocus />
       </label>
       <label>
-        <span>Email</span>
-        <input type="email" name="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <span>Email :</span>
+        <OutlinedInput   
+            type="email" 
+            name="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} />
       </label>
 
-      <button type="submit" disabled={loading}>
+      <Button variant="contained" type="submit" disabled={loading}>
         {loading ? "Trying to login..." : "Login"}
-      </button>
+      </Button>
     </form>
   );
 }

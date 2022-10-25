@@ -1,6 +1,7 @@
 import { Product, ingredients } from "../../domain/product";
 import { hasAllergy, hasPreference } from "../../domain/user";
 import { useUserStorage } from "../../services/storageAdapter";
+import  "./Cookie.scss";
 
 type ToppingsProps = {
   cookie: Product;
