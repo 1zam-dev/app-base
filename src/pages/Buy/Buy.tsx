@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { useOrderProducts } from "../../application/orderProducts";
 import { UserName } from "../../domain/user";
 import { useCartStorage, useUserStorage } from "../../services/storageAdapter";
-import styles from "./Buy.module.css";
+import { OutlinedInput,TextareaAutosize,Button } from "@mui/material";
+import  "./Buy.scss";
 
 export function Buy() {
   const { orderProducts } = useOrderProducts();
@@ -26,10 +27,10 @@ export function Buy() {
   return (
     <section>
       <h2>Checkout</h2>
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form className='form' onSubmit={handleSubmit}>
         <label>
-          <span>Name</span>
-          <input
+          <span>Name :</span>
+          <OutlinedInput
             type="text"
             name="name"
             value={name}
@@ -38,8 +39,8 @@ export function Buy() {
           />
         </label>
         <label>
-          <span>Email</span>
-          <input
+          <span>Email :</span>
+          <OutlinedInput
             type="email"
             name="email"
             value={email}
@@ -47,17 +48,20 @@ export function Buy() {
           />
         </label>
         <label>
-          <span>Address</span>
-          <textarea
+          <span>Address :</span>
+          <TextareaAutosize
+          aria-label="minimum height"
+          minRows={3}
             name="address"
             value={address}
             onChange={(e) => setAddress(e.target.value)}
-          ></textarea>
+            style={{ width: 300 }}
+          ></TextareaAutosize>
         </label>
 
-        <button type="submit" disabled={loading}>
+        <Button variant="contained" type="submit" disabled={loading}>
           {loading ? "Preparing an order..." : "Checkout"}
-        </button>
+        </Button>
       </form>
     </section>
   );
